@@ -1,0 +1,29 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        "files": {
+          ".write": "$uid === auth.uid",
+          ".read": "$uid === auth.uid",
+          "$file": {
+            ".read": "$uid === auth.uid || data.child(auth.id).val() == true",
+            ".write": "$uid === auth.uid || data.child(auth.id).val() == true"
+          }
+        },
+        "linked": {
+          ".read": "$uid === auth.uid",
+          ".write": "$uid === auth.uid"
+        },
+        ".read": "$uid === auth.uid"
+      }
+    },
+    "usersToEmail": {
+      ".read": "true",
+      ".write": "true"
+    },
+    "emailsToUser": {
+      ".read": "true",
+      ".write": "true"
+    }
+  }
+}
