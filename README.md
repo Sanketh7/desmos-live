@@ -6,6 +6,10 @@ View it at: https://desmos-live-23326.web.app/
 
 
 
+Cloud Functions can be found at: https://github.com/Sanketh7/desmos-live-cloud-functions
+
+
+
 ## How it works
 
 - Users can share Desmos projects (that are created with this app) with others and each user can commit their changes when they are done.
