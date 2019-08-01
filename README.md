@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# desmos-live
 
-## Available Scripts
+A web app that allows users to collaborate on Desmos projects.
 
-In the project directory, you can run:
+View it at: https://desmos-live-23326.web.app/
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## How it works
 
-### `npm test`
+- Users can share Desmos projects (that are created with this app) with others and each user can commit their changes when they are done.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## To Do
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- clean up the UI
+- add a comprehensive report when committing
+- add more pages (i.e. "About")
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Technologies Used
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Web App
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| Name     | Description                                                  |
+| -------- | ------------------------------------------------------------ |
+| React.js | A library used for creating user interfaces with Javascript (Node.js) and JSX. |
+| CSS      | A styling language used to alter the style and layout of components. |
+| HTML/JSX | Both are the backbones of the components that make up the user interface. |
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Cloud Solution (Firebase)
 
-## Learn More
+| Name              | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| Realtime Database | A database solution that stores user data and file data for easy access. |
+| Cloud Functions   | A solution that acts like a server to handle HTTP requests and manage data securely. |
+| Storage           | A storage solution to store large data (like images) for easy retrieval and manipulation. |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
