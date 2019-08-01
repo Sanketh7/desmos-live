@@ -1,0 +1,70 @@
+#changes-list {
+    grid-area: changes-list;
+    margin: 10px 10px;
+    padding: 15px 30px;
+    background-color: rgb(224, 221, 221);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+#changes-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr;
+    grid-template-areas: "changes-title" "changes-list";
+}
+
+#changes-title {
+    grid-area: changes-title;
+    background-color: rgb(250, 248, 248);
+    border-radius: 10px;
+    margin: 10px 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.changes-item {
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2vh;
+    margin: 10px 0px;
+}
+
+.removed {
+    font-weight: bold;
+    color: darkred;
+    background-color: lightcoral;
+}
+
+.added {
+    font-weight: bold;
+    color: darkgreen;
+    background-color: lightgreen;
+}
+
+.same {
+    color: black;
+    background-color: lightgray;
+}
+
+#changes-list::-webkit-scrollbar-track
+{
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+#changes-list::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: transparent;
+}
+
+#changes-list::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background: linear-gradient(to top, green, lightgreen);
+}

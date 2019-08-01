@@ -1,0 +1,15 @@
+.indented {
+    margin-left: 15%;
+}
+
+.folder-node {
+    display: flex;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+}
+
+.caret-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,9 @@
+#modal-submit-bar {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+
+.modal-submit-bar-btn {
+    margin: 0px 10px;
+}

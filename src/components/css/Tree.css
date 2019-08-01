@@ -1,0 +1,52 @@
+#tree-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 5% 1fr;
+    grid-template-areas: "tree-title" "tree-toolbar" "tree-list";
+}
+
+#tree-toolbar {
+    grid-area: tree-toolbar;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+#tree-title {
+    grid-area: tree-title;
+    background-color: rgb(250, 248, 248);
+    border-radius: 10px;
+    margin: 10px 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+#tree-list {
+    grid-area: tree-list;
+    width: 100%;
+    margin: 10px 0px;
+    overflow: scroll;
+}
+
+
+#tree-list::-webkit-scrollbar-track
+{
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+#tree-list::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: transparent;
+}
+
+#tree-list::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background: linear-gradient(to top, green, lightgreen);
+}

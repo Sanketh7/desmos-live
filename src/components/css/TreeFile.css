@@ -1,0 +1,12 @@
+.file-node {
+    display: flex;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+}
+
+.project-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}

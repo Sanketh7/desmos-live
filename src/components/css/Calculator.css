@@ -1,0 +1,34 @@
+#calc-grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 1fr 10%;
+    grid-template-areas: "current-file-shower" "calculator" "buttons";
+}
+
+#current-file-shower {
+    margin-top: 10px;
+    grid-area: current-file-shower;
+    width: 100%;
+}
+
+#calculator {
+    grid-area: calculator;
+    width: 100%;
+}
+
+#select-file {
+    grid-area: calculator;
+    width: 100%;
+}
+
+#calc-buttons {
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calc-btn {
+    margin: 10px 10px;
+    margin-left: 0px;
+}

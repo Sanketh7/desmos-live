@@ -1,0 +1,18 @@
+.grid-container {
+    height: calc(100vh - 50px);
+    column-gap: 15px;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "tree editor changes";
+}
+
+.changes { grid-area: changes; height: calc(100vh - 50px);}
+
+.editor { grid-area: editor; height: calc(100vh - 50px);}
+
+.tree { grid-area: tree; height: calc(100vh - 50px); }
+
+.navbar {
+    height: 50px;
+}

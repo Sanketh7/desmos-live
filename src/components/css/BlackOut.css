@@ -1,0 +1,19 @@
+.black-out {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    background-image: -webkit-linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 30vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    position: relative;
+    z-index: 1000;
+}
+
+.black-out-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    color: whitesmoke;
+}
