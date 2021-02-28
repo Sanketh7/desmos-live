@@ -2,7 +2,7 @@ import React from 'react';
 import App from './App';
 import SignInPage from './SignInPage';
 
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 const mapStateToProps = state => {
     return {
@@ -15,14 +15,14 @@ class Redux_Main extends React.Component {
     render() {
         return (
             <>
-            { 
-                this.props.uid && 
-                <App />
-            }
-            {
-                !this.props.uid &&
-                <SignInPage />
-            }
+                {
+                    this.props.uid &&
+                    <App />
+                }
+                {
+                    !this.props.uid &&
+                    <SignInPage />
+                }
             </>
         );
     }

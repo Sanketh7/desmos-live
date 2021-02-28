@@ -1,10 +1,10 @@
 import React from 'react';
 import TreeFolder from './TreeFolder';
-import Button from 'react-bootstrap/Button';
+import {Button, Container, Row, Col} from 'react-bootstrap';
 import AddFileModal from './AddFileModal';
 
-import { connect } from 'react-redux';
-import { updateDisplayTreeCheckMarks, updateMyFiles, updateOtherFiles } from '../redux/actions/index';
+import {connect} from 'react-redux';
+import {updateDisplayTreeCheckMarks, updateMyFiles, updateOtherFiles} from '../redux/actions/index';
 
 
 import './css/Tree.css';
@@ -41,7 +41,7 @@ class Redux_Tree extends React.Component {
     }
 
     handleDeleteButton() {
-        
+
     }
 
     handleShowAddFileModal() {
@@ -63,7 +63,7 @@ class Redux_Tree extends React.Component {
     }
 
     async updateMyFiles() {
-        let vals = await dbScript.getFileNames(this.props.uid);
+        let vals = await dbScript.getMyFileNames(this.props.uid);
         this.props.updateMyFiles({list: vals});
     }
 
@@ -91,23 +91,28 @@ class Redux_Tree extends React.Component {
         } else {
             addOrDeleteButton = <Button variant="success" id="tree-add" onClick={this.handleShowAddFileModal}>Add</Button>;
         }
-
         return (
-            <div id="tree-container">
-                <div id="tree-title">
-                    <h3>Projects</h3>
-                </div>
-                <AddFileModal show={this.state.showAddFileModal} handleClose={this.handleCloseAddFileModal} handleAddFile={this.handleAddFile}/>
-                <div id="tree-toolbar">
-                    {addOrDeleteButton}
-                    {editOrDoneButton}
-                </div>
-                <div id="tree-list">
-                    <TreeFolder name="Owner: Me" isMyFiles={true} displayCheckMarks={this.state.displayCheckMarks} />
-                    <TreeFolder name="Owner: Others" isMyFiles={false} displayCheckMarks={this.state.displayCheckMarks} />
-                </div>
-            </div>
-        ); 
+            <Container>
+                <Row><Col><h3 id="tree-title">Projects</h3></Col></Row>
+                <AddFileModal show={this.state.showAddFileModal} handleClose={this.handleCloseAddFileModal} handleAddFile={this.handleAddFile} />
+                <Row>
+                    <Col>
+                        <div id="tree-toolbar">
+                            {addOrDeleteButton}
+                            {editOrDoneButton}
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div id="tree-list">
+                            <TreeFolder name="Owner: Me" isMyFiles={true} displayCheckMarks={this.state.displayCheckMarks} />
+                            <TreeFolder name="Owner: Others" isMyFiles={false} displayCheckMarks={this.state.displayCheckMarks} />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        );
     }
 }
 

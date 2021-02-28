@@ -4,15 +4,12 @@ import Calculator from './components/Calculator';
 import Tree from './components/Tree';
 import ChangesList from './components/ChangesList';
 
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
-import Button from 'react-bootstrap/Button';
+import {Nav, Navbar, Button, Container, Row, Col} from 'react-bootstrap';
 
 import './App.css';
 
-import { connect } from 'react-redux';
-import { updateUid, updateDisplayTreeCheckMarks, updateMyFiles, updateOtherFiles } from './redux/actions/index';
+import {connect} from 'react-redux';
+import {updateUid, updateDisplayTreeCheckMarks, updateMyFiles, updateOtherFiles} from './redux/actions/index';
 
 const authScript = require('./firebase/authScript.js');
 
@@ -21,7 +18,7 @@ const mapDispatchToProps = dispatch => {
         updateUid: uid => dispatch(updateUid(uid)),
         updateDisplayTreeCheckMarks: () => dispatch(updateDisplayTreeCheckMarks()),
         updateMyFiles: list => dispatch(updateMyFiles(list)),
-        updateOtherFiles: list =>  dispatch(updateOtherFiles(list))
+        updateOtherFiles: list => dispatch(updateOtherFiles(list))
     };
 };
 
@@ -67,6 +64,24 @@ class Redux_App extends React.Component {
                         Sign Out
                     </Button>
                 </Navbar>
+                <Container fluid className="full-height">
+                    <Row className="full-height">
+                        <Col><Tree /></Col>
+                        <Col xs={6}><Calculator /></Col>
+                        <Col><ChangesList /></Col>
+                    </Row>
+                </Container>
+            </div>
+        );
+    }
+}
+
+const App = connect(mapStateToProps, mapDispatchToProps)(Redux_App);
+
+export default App;
+
+/*
+
                 <div className="grid-container">
                     <div className="changes">
                         <ChangesList />
@@ -78,11 +93,4 @@ class Redux_App extends React.Component {
                         <Tree />
                     </div>
                 </div>
-            </div>
-        );
-    }
-}
-
-const App = connect(mapStateToProps, mapDispatchToProps)(Redux_App);
-
-export default App;
+            */

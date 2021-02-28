@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { updateUid, updateMyFiles, updateOtherFiles } from './redux/actions/index';
+import {connect} from 'react-redux';
+import {updateUid, updateMyFiles, updateOtherFiles} from './redux/actions/index';
 
 import './SignInPage.css';
 
@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => {
     return {
         updateUid: uid => dispatch(updateUid(uid)),
         updateMyFiles: list => dispatch(updateMyFiles(list)),
-        updateOtherFiles: list =>  dispatch(updateOtherFiles(list))
+        updateOtherFiles: list => dispatch(updateOtherFiles(list))
     };
 };
 
@@ -29,6 +29,7 @@ class Redux_SignInPage extends React.Component {
         let vals = await dbScript.getMyFileNames(user.uid);
         this.props.updateMyFiles({list: vals});
         let vals2 = await dbScript.getOtherFileNames(user.uid);
+        console.log(vals2);
         this.props.updateOtherFiles({list: vals2});
     }
 
@@ -41,7 +42,7 @@ class Redux_SignInPage extends React.Component {
                         <div id="sign-in-container">
                             <div id="sign-in-main-text">
                                 Sign In
-                            </div> 
+                            </div>
                             <div className="g-sign-in-button" onClick={this.handleSignIn}>
                                 <div className="content-wrapper">
                                     <div className="logo-wrapper">
@@ -60,7 +61,7 @@ class Redux_SignInPage extends React.Component {
                         Desmos Live
                     </div>
                 </div>
-                
+
             </div>
         );
     }

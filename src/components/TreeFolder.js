@@ -1,13 +1,13 @@
 import React from 'react';
 import './css/TreeFolder.css';
 
-import { FaCaretRight, FaCaretDown } from 'react-icons/fa';
+import {FaCaretRight, FaCaretDown} from 'react-icons/fa';
 
 import Collapse from 'react-bootstrap/Collapse';
 import Alert from 'react-bootstrap/Alert';
 import TreeFile from './TreeFile.js';
 
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 const uuidv4 = require('uuid/v4');
 
@@ -38,14 +38,14 @@ class Redux_TreeFolder extends React.Component {
                 <div className="caret-icon-container">
                     <FaCaretRight />
                 </div>
-            );        
+            );
         }
     }
 
     render() {
         let insideContent;
         if (this.props.isMyFiles) {
-            if (!this.props.myFiles.length) {
+            if (this.props.myFiles === {}) {
                 insideContent = <Alert variant="primary">No files!</Alert>;
             } else {
                 insideContent = [];
@@ -57,7 +57,7 @@ class Redux_TreeFolder extends React.Component {
             }
         } else {
             insideContent = [];
-            if (!this.props.otherFiles.length) {
+            if (this.props.otherFiles === {}) {
                 insideContent = <Alert variant="primary">No files!</Alert>;
             } else {
                 Object.keys(this.props.otherFiles).forEach(userKey => {
@@ -69,13 +69,13 @@ class Redux_TreeFolder extends React.Component {
                 });
             }
         }
-       
-        
+
+
         return (
             <div>
                 <div
                     className="folder-node"
-                    onClick={() => this.setState({ open: !this.state.open })}
+                    onClick={() => this.setState({open: !this.state.open})}
                     aria-controls="collapse-div"
                     aria-expanded={this.state.open}
                 >
@@ -88,7 +88,7 @@ class Redux_TreeFolder extends React.Component {
                     </div>
                 </Collapse>
             </div>
-        );  
+        );
     }
 }
 

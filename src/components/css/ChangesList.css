@@ -1,23 +1,11 @@
 #changes-list {
-    grid-area: changes-list;
     margin: 10px 10px;
     padding: 15px 30px;
-    background-color: rgb(224, 221, 221);
     border-radius: 10px;
-    overflow-y: scroll;
-}
-
-#changes-container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10% 1fr;
-    grid-template-areas: "changes-title" "changes-list";
+    height: auto;
 }
 
 #changes-title {
-    grid-area: changes-title;
-    background-color: rgb(250, 248, 248);
     border-radius: 10px;
     margin: 10px 10px;
     font-family: 'Source Code Pro', monospace;
@@ -50,7 +38,7 @@
     color: black;
     background-color: lightgray;
 }
-
+/*
 #changes-list::-webkit-scrollbar-track
 {
 	background-color: transparent;
@@ -68,3 +56,4 @@
 	border-radius: 5px;
 	background: linear-gradient(to top, green, lightgreen);
 }
+*/
