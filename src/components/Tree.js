@@ -58,8 +58,13 @@ class Redux_Tree extends React.Component {
                 alert("File already exists!");
             }
 
-            await this.updateMyFiles();
+            await this.updateAllFiles();
         });
+    }
+
+    async updateAllFiles() {
+        await this.updateMyFiles();
+        await this.updateOtherFiles();
     }
 
     async updateMyFiles() {
@@ -74,7 +79,7 @@ class Redux_Tree extends React.Component {
 
     async handleEditButton() {
         this.props.updateDisplayTreeCheckMarks();
-        await this.updateFiles();
+        await this.updateAllFiles();
     }
 
     render() {

@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {updateUid, updateMyFiles, updateOtherFiles} from './redux/actions/index';
 
+import {Card} from 'react-bootstrap';
+
 import './SignInPage.css';
 
 const authScript = require('./firebase/authScript.js');
@@ -36,22 +38,36 @@ class Redux_SignInPage extends React.Component {
     render() {
         return (
             <div id="sign-in-background">
+                <Card body id="sign-in-card">
+                    <Card.Title>Sign In</Card.Title>
+                    <div className="g-sign-in-button" onClick={this.handleSignIn}>
+                        <div className="content-wrapper">
+                            <div className="logo-wrapper">
+                                <img src="https://developers.google.com/identity/images/g-logo.png" alt="google logo" />
+                            </div>
+                            <span className="text-container">
+                                <span>Sign in with Google</span>
+                            </span>
+                        </div>
+                    </div>
+                </Card>
+            </div>
+        );
+    }
+}
+
+const SignInPage = connect(null, mapDispatchToProps)(Redux_SignInPage);
+
+export default SignInPage;
+
+/*
+
                 <div className="sign-in-grid-container">
 
                     <div className="sign-in-box">
                         <div id="sign-in-container">
                             <div id="sign-in-main-text">
                                 Sign In
-                            </div>
-                            <div className="g-sign-in-button" onClick={this.handleSignIn}>
-                                <div className="content-wrapper">
-                                    <div className="logo-wrapper">
-                                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="google logo" />
-                                    </div>
-                                    <span className="text-container">
-                                        <span>Sign in with Google</span>
-                                    </span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,12 +77,4 @@ class Redux_SignInPage extends React.Component {
                         Desmos Live
                     </div>
                 </div>
-
-            </div>
-        );
-    }
-}
-
-const SignInPage = connect(null, mapDispatchToProps)(Redux_SignInPage);
-
-export default SignInPage;
+*/

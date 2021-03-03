@@ -56,10 +56,7 @@ class Redux_App extends React.Component {
             <div>
                 <Navbar bg="dark" variant="dark">
                     <Navbar.Brand href="#home">Desmos Live!</Navbar.Brand>
-                    <Nav className="mr-auto">
-                        <Nav.Link href="#home">Editor</Nav.Link>
-                        <Nav.Link href="#about">About</Nav.Link>
-                    </Nav>
+                    <Nav className="mr-auto"></Nav>
                     <Button variant="primary" onClick={this.handleSignOut}>
                         Sign Out
                     </Button>
@@ -79,18 +76,3 @@ class Redux_App extends React.Component {
 const App = connect(mapStateToProps, mapDispatchToProps)(Redux_App);
 
 export default App;
-
-/*
-
-                <div className="grid-container">
-                    <div className="changes">
-                        <ChangesList />
-                    </div>
-                    <div className="editor">
-                        <Calculator />
-                    </div>
-                    <div className="tree">
-                        <Tree />
-                    </div>
-                </div>
-            */
