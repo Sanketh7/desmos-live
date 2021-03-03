@@ -19,6 +19,7 @@ Cloud Functions can be found at: https://github.com/Sanketh7/desmos-live-cloud-f
 ## To Do
 
 - clean up the UI
+- allow users to delete files
 - add a comprehensive report when committing
 - add more pages (i.e. "About")
 
